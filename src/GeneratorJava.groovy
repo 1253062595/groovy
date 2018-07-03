@@ -1,73 +1,82 @@
+import groovy.json.JsonBuilder
+import groovy.json.JsonOutput
+
 class GeneratorJava {
 
     static void main(String[] args) {
 
-        // ====================
-        def pathProto
-        def pathOutController
-        def pathOutRoute
+//        // ====================
+//        def pathProto
+//        def pathOutController
+//        def pathOutRoute
+//
+//        if (null == args || args.size() < 3) {
+//            println "请在命令行尾部输入proto文件夹路径、生成的controller文件夹路径 及 生成的route文件夹路径"
+//            return
+//        }
+//
+//        if (null != args) {
+//            if (args.size() >= 1) {
+//                pathProto = args[0]
+//            }
+//            if (args.size() >= 2) {
+//                pathOutController = args[1]
+//            }
+//            if (args.size() >= 3) {
+//                pathOutRoute = args[2]
+//            }
+//        }
+//
+//        def dirProto
+//        def dirOutController
+//        def dirOutRoute
+//
+//        if (null != pathProto) {
+//            dirProto = new File(pathProto)
+//            if (!dirProto.exists()) {
+//                dirProto.mkdir()
+//            }
+//        } else {
+//            println "未输入proto文件夹路径"
+//            return
+//        }
+//
+//        if (null != pathOutController) {
+//            dirOutController = new File(pathOutController)
+//            if (dirOutController.exists()) {
+//                dirOutController.delete()
+//            }
+//            if (!dirOutController.exists()) {
+//                dirOutController.mkdir()
+//            }
+//        } else {
+//            println "未输入controller文件夹路径"
+//            return
+//        }
+//
+//        if (null != pathOutRoute) {
+//            dirOutRoute = new File(pathOutRoute)
+//            if (dirOutRoute.exists()) {
+//                dirOutRoute.delete()
+//            }
+//            if (!dirOutRoute.exists()) {
+//                dirOutRoute.mkdir()
+//            }
+//        } else {
+//            println "未输入route文件夹路径"
+//            return
+//        }
+//
+//        // ====================
+//        generateController(dirProto, dirOutController)
+//        generateRouteFile(dirProto, dirOutRoute)
+//        generateRouteIndexFile(dirOutRoute, dirOutRoute)
 
-        if (null == args || args.size() < 3) {
-            println "请在命令行尾部输入proto文件夹路径、生成的controller文件夹路径 及 生成的route文件夹路径"
-            return
-        }
+        Map<String, String> messageMap = new HashMap() // messageName, messageJsonBody
 
-        if (null != args) {
-            if (args.size() >= 1) {
-                pathProto = args[0]
-            }
-            if (args.size() >= 2) {
-                pathOutController = args[1]
-            }
-            if (args.size() >= 3) {
-                pathOutRoute = args[2]
-            }
-        }
+        def dirIn = new File("/Users/jys/groovy/projects/p2js/dirIn")
+        parseToJson(dirIn)
 
-        def dirProto
-        def dirOutController
-        def dirOutRoute
-
-        if (null != pathProto) {
-            dirProto = new File(pathProto)
-            if (!dirProto.exists()) {
-                dirProto.mkdir()
-            }
-        } else {
-            println "未输入proto文件夹路径"
-            return
-        }
-
-        if (null != pathOutController) {
-            dirOutController = new File(pathOutController)
-            if (dirOutController.exists()) {
-                dirOutController.delete()
-            }
-            if (!dirOutController.exists()) {
-                dirOutController.mkdir()
-            }
-        } else {
-            println "未输入controller文件夹路径"
-            return
-        }
-
-        if (null != pathOutRoute) {
-            dirOutRoute = new File(pathOutRoute)
-            if (dirOutRoute.exists()){
-                dirOutRoute.delete()
-            }
-            if (!dirOutRoute.exists()) {
-                dirOutRoute.mkdir()
-            }
-        } else {
-            println "未输入route文件夹路径"
-            return
-        }
-
-        // ====================
-        generateController(dirProto, dirOutController)
-        generateRouteFile(dirProto, dirOutRoute)
-        generateRouteIndexFile(dirOutRoute, dirOutRoute)
     }
 
     static void generateController(File dirIn, File dirOut) {
@@ -238,5 +247,94 @@ class GeneratorJava {
             return s;
         else
             return (new StringBuilder()).append(Character.toUpperCase(s.charAt(0))).append(s.substring(1)).toString();
+    }
+
+    static void parseToJson(File dirIn) {
+        // 1 遍历dirIn中proto文件
+        dirIn.eachFile {
+
+            def flagStart = false // 本message开始标记
+            def flagEnd = false // 本message结束标记
+            def indexStart = 0 // message start index
+            def indexEnd = 0 // message end index
+            def index = 0
+
+            // 2 读取文件
+            def protoFileLines = it.readLines("utf-8")
+            protoFileLines.each {
+
+                // 规则---repeated的message全部写外部，即message不包含message，并且repeated的message写在包含它的message的前边
+                // 开始
+                if (it.startsWith("message")) {
+                    indexStart = index
+                    flagStart = true
+                }
+
+                // 结束
+                if (it.startsWith("}")) {
+                    if (flagStart) {
+                        indexEnd = index
+                        flagEnd = true
+                    }
+                }
+
+                if (flagStart && flagEnd) {
+                    parseMessageBlock(protoFileLines.subList(indexStart, indexEnd + 1))
+                    flagStart = false
+                    flagEnd = false
+                    indexStart = 0
+                    indexEnd = 0
+                }
+
+                index++
+            }
+        }
+    }
+
+    static void parseMessageBlock(messageLines) {
+
+        def messageSingle = new MessageSingle()
+        def messageProps = new ArrayList<MessageProp>()
+
+        messageLines.each {
+            if (it.trim().startsWith("message")) {
+                // 开始
+                def messageNameLine = it.split(" ")
+                if (messageNameLine.size() >= 2) {
+                    messageSingle.message = messageNameLine[1].trim()
+                }
+            } else if (it.trim().startsWith("}")) {
+                // 结束
+                messageSingle.props = messageProps
+            } else {
+                // 中间 属性
+                if (it.contains(";")) {
+                    def messageProp = new MessageProp()
+
+                    def propLine = it.split(";")
+                    def typeAndName = propLine[0].trim().split("=")[0].trim().split(" ")
+
+                    messageProp.property = typeAndName[1].trim()
+                    messageProp.type = typeAndName[0].trim()
+
+                    if (propLine.size() > 1) {
+                        def desc = propLine[1].trim()
+                        if (desc.contains("//")) {
+                            def start = desc.indexOf("//")
+                            messageProp.describe = desc.substring(start + 2).trim()
+                        }
+                    } else {
+                        messageProp.describe = ""
+                    }
+
+                    messageProps.add(messageProp)
+                }
+            }
+        }
+
+        if (null != messageSingle.message && null != messageSingle.props) {
+            def json = JsonOutput.toJson(messageSingle)
+            println "json string --- " + json
+        }
     }
 }

@@ -7,18 +7,31 @@ option java_outer_classname = "HelloWorldProto";
 package helloworld;
 
 service Greeter {
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
-  rpc SayHello1 (HelloRequest) returns (HelloReply) {}
-  rpc SayHello2 (HelloRequest) returns (HelloReply) {}
-  rpc SayHello3 (HelloRequest) returns (HelloReply) {}
-  rpc SayHello4 (HelloRequest) returns (HelloReply) {}
-  rpc SayHello5 (HelloRequest) returns (HelloReply) {}
+    rpc SayHello (HelloRequest) returns (HelloReply) {
+    }
+    rpc SayHello1 (HelloRequest) returns (HelloReply) {
+    }
+    rpc SayHello2 (HelloRequest) returns (HelloReply) {
+    }
+    rpc SayHello3 (HelloRequest) returns (HelloReply) {
+    }
+    rpc SayHello4 (HelloRequest) returns (HelloReply) {
+    }
+    rpc SayHello5 (HelloRequest) returns (HelloReply) {
+    }
 }
 
 message HelloRequest {
-  string name = 1;
+    string name = 1;
 }
 
 message HelloReply {
-  string message = 1;
+    string message = 1;
+}
+
+message TestReq {
+    int32 prop_id = 1; // des1
+    string prop_name = 2; //des2
+    int64 prop_create_time = 3; //
+    string prop_update_time = 4;
 }
