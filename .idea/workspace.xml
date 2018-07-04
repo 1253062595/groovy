@@ -2,23 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f6426d-589a-4732-958e-8a247ef6402f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MessageProp.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MessageSingle.groovy" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dirIn/base.proto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dirIn/helloworld1.proto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_generateCLSFile_closure2$_closure8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_generateCLSFile_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_generateIndexFile_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_generateIndexFile_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_generateJSFile_closure1$_closure7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_generateJSFile_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_goThroughDir_closure5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2$_goThroughFile_closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/Generator2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorGroovy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateController_closure1$_closure7.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateController_closure1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteFile_closure2$_closure8.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteFile_closure2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteIndexFile_closure3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteIndexFile_closure4.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_parseMessageBlock_closure6.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_parseToJson_closure5$_closure9.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_parseToJson_closure5.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/MessageProp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/MessageSingle.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MessageProp.groovy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/MessageSingle.groovy" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dirIn/helloworld.proto" afterPath="$PROJECT_DIR$/dirIn/helloworld.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GeneratorGroovy.groovy" afterPath="$PROJECT_DIR$/src/GeneratorGroovy.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json.proto" afterPath="$PROJECT_DIR$/json.proto" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p2js.iml" afterPath="$PROJECT_DIR$/p2js.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GeneratorJava.groovy" afterPath="$PROJECT_DIR$/src/GeneratorJava.groovy" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,26 +33,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GeneratorJava.groovy" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GeneratorJava.groovy" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GeneratorJava.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+            <state relative-caret-position="354">
+              <caret line="327" column="0" lean-forward="false" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
-                <element signature="e#124#157#0" expanded="false" />
+                <element signature="e#354#387#0" expanded="false" />
                 <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-                <element signature="e#2674#3154#0" expanded="false" />
-                <element signature="e#3202#3922#0" expanded="false" />
-                <element signature="e#3973#4957#0" expanded="false" />
-                <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-                <element signature="e#5867#6507#0" expanded="false" />
-                <element signature="e#6555#6660#1" expanded="false" />
-                <element signature="e#6555#6660#1" expanded="false" />
-                <element signature="e#6711#6928#0" expanded="false" />
+                <element signature="e#4239#5223#0" expanded="false" />
                 <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
                 <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
                 <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+                <element signature="e#10148#10168#0" expanded="false" />
+                <element signature="e#10237#10332#0" expanded="false" />
+                <element signature="e#10396#10554#0" expanded="false" />
+                <element signature="e#10598#10847#0" expanded="false" />
+                <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+                <element signature="e#12012#14899#0" expanded="false" />
+                <element signature="e#14975#15158#0" expanded="false" />
+                <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+                <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -59,18 +62,21 @@
       <file leaf-file-name="helloworld.proto" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dirIn/helloworld.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="135">
+              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="71" />
+              <folding>
+                <element signature="n#InnerMessage#0;n#!!top" expanded="false" />
+                <element signature="n#PageNo#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json.proto" pinned="false" current-in-tab="true">
+      <file leaf-file-name="json.proto" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/json.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="222" column="31" lean-forward="true" selection-start-line="222" selection-start-column="31" selection-end-line="222" selection-end-column="31" />
+            <state relative-caret-position="295">
+              <caret line="214" column="20" lean-forward="false" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="20" />
               <folding>
                 <element signature="n#ClientListReq#0;n#!!top" expanded="false" />
                 <element signature="n#ClientListRes#0;n#!!top" expanded="false" />
@@ -82,27 +88,9 @@
                 <element signature="n#DealRes#0;n#!!top" expanded="false" />
                 <element signature="n#PositionRes#0;n#!!top" expanded="false" />
                 <element signature="n#ProfitRes#0;n#!!top" expanded="false" />
+                <element signature="n#:&quot;messageName&quot;,&#10;                props:[#0;n#!!top" expanded="false" />
+                <element signature="n#:&quot;messageName&quot;,&#10;                props:[#1;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageSingle.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MessageSingle.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageProp.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MessageProp.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -147,9 +135,10 @@
         <option value="$PROJECT_DIR$/route/helloworld1.js" />
         <option value="$PROJECT_DIR$/fromHZY/client.proto" />
         <option value="$PROJECT_DIR$/src/GeneratorGroovy.groovy" />
-        <option value="$PROJECT_DIR$/dirIn/helloworld.proto" />
         <option value="$PROJECT_DIR$/src/MessageProp.groovy" />
         <option value="$PROJECT_DIR$/src/MessageSingle.groovy" />
+        <option value="$PROJECT_DIR$/json.proto" />
+        <option value="$PROJECT_DIR$/dirIn/helloworld.proto" />
         <option value="$PROJECT_DIR$/src/GeneratorJava.groovy" />
       </list>
     </option>
@@ -168,10 +157,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="92" />
-    <option name="y" value="49" />
+    <option name="x" value="151" />
+    <option name="y" value="48" />
     <option name="width" value="1920" />
-    <option name="height" value="1010" />
+    <option name="height" value="985" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -210,6 +199,10 @@
               <item name="p2js" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="proto2js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -221,7 +214,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -408,15 +401,15 @@
       <workItem from="1530238927668" duration="285000" />
       <workItem from="1530239242932" duration="249000" />
       <workItem from="1530239533184" duration="210000" />
-      <workItem from="1530500066819" duration="30482000" />
+      <workItem from="1530500066819" duration="43378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51858000" />
+    <option name="totallyTimeSpent" value="64754000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="92" y="49" width="1920" height="1010" extended-state="0" />
+    <frame x="151" y="48" width="1920" height="985" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -431,14 +424,14 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.401566" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943925" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26845637" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35327962" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13844515" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16400427" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -468,20 +461,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#124#157#0" expanded="false" />
+            <element signature="e#354#387#0" expanded="false" />
             <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#2674#3154#0" expanded="false" />
-            <element signature="e#3202#3922#0" expanded="false" />
-            <element signature="e#3973#4957#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#5867#6507#0" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6711#6928#0" expanded="false" />
+            <element signature="e#4239#5223#0" expanded="false" />
             <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#10148#10168#0" expanded="false" />
+            <element signature="e#10237#10332#0" expanded="false" />
+            <element signature="e#10396#10554#0" expanded="false" />
+            <element signature="e#10598#10847#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#12012#14899#0" expanded="false" />
+            <element signature="e#14975#15158#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -499,20 +493,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#124#157#0" expanded="false" />
+            <element signature="e#354#387#0" expanded="false" />
             <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#2674#3154#0" expanded="false" />
-            <element signature="e#3202#3922#0" expanded="false" />
-            <element signature="e#3973#4957#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#5867#6507#0" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6711#6928#0" expanded="false" />
+            <element signature="e#4239#5223#0" expanded="false" />
             <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#10148#10168#0" expanded="false" />
+            <element signature="e#10237#10332#0" expanded="false" />
+            <element signature="e#10396#10554#0" expanded="false" />
+            <element signature="e#10598#10847#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#12012#14899#0" expanded="false" />
+            <element signature="e#14975#15158#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -530,20 +525,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#124#157#0" expanded="false" />
+            <element signature="e#354#387#0" expanded="false" />
             <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#2674#3154#0" expanded="false" />
-            <element signature="e#3202#3922#0" expanded="false" />
-            <element signature="e#3973#4957#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#5867#6507#0" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6711#6928#0" expanded="false" />
+            <element signature="e#4239#5223#0" expanded="false" />
             <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#10148#10168#0" expanded="false" />
+            <element signature="e#10237#10332#0" expanded="false" />
+            <element signature="e#10396#10554#0" expanded="false" />
+            <element signature="e#10598#10847#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#12012#14899#0" expanded="false" />
+            <element signature="e#14975#15158#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -561,20 +557,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#124#157#0" expanded="false" />
+            <element signature="e#354#387#0" expanded="false" />
             <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#2674#3154#0" expanded="false" />
-            <element signature="e#3202#3922#0" expanded="false" />
-            <element signature="e#3973#4957#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#5867#6507#0" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6711#6928#0" expanded="false" />
+            <element signature="e#4239#5223#0" expanded="false" />
             <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#10148#10168#0" expanded="false" />
+            <element signature="e#10237#10332#0" expanded="false" />
+            <element signature="e#10396#10554#0" expanded="false" />
+            <element signature="e#10598#10847#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#12012#14899#0" expanded="false" />
+            <element signature="e#14975#15158#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -592,20 +589,21 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#124#157#0" expanded="false" />
+            <element signature="e#354#387#0" expanded="false" />
             <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#2674#3154#0" expanded="false" />
-            <element signature="e#3202#3922#0" expanded="false" />
-            <element signature="e#3973#4957#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#5867#6507#0" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6711#6928#0" expanded="false" />
+            <element signature="e#4239#5223#0" expanded="false" />
             <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
             <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#10148#10168#0" expanded="false" />
+            <element signature="e#10237#10332#0" expanded="false" />
+            <element signature="e#10396#10554#0" expanded="false" />
+            <element signature="e#10598#10847#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#12012#14899#0" expanded="false" />
+            <element signature="e#14975#15158#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -744,14 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../../groovy-2.4.15/lib/groovy-json-2.4.15.jar!/groovy/json/JsonOutput.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/GeneratorGroovy.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -760,57 +750,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dirIn/helloworld.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MessageProp.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MessageSingle.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="32" lean-forward="false" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneratorJava.groovy">
+    <entry file="jar://$PROJECT_DIR$/../../groovy-2.4.15/lib/groovy-json-2.4.15.jar!/groovy/json/JsonDelegate.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="333" column="0" lean-forward="true" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+        <state relative-caret-position="150">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../groovy-2.4.15/lib/groovy-json-2.4.15.jar!/groovy/json/JsonOutput.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="487" column="42" lean-forward="false" selection-start-line="487" selection-start-column="29" selection-end-line="487" selection-end-column="42" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <element signature="e#124#157#0" expanded="false" />
-            <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#2674#3154#0" expanded="false" />
-            <element signature="e#3202#3922#0" expanded="false" />
-            <element signature="e#3973#4957#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="e#5867#6507#0" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6555#6660#1" expanded="false" />
-            <element signature="e#6711#6928#0" expanded="false" />
-            <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
-            <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="method#toJson#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#1;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#2;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#3;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#4;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#5;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#6;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#7;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#8;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#9;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#10;class#JsonOutput#0" expanded="false" />
+            <element signature="method#toJson#11;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeNumber#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeObject#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#getObjectProperties#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeCharSequence#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeDate#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeArray#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeMap#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#writeIterator#0;class#JsonOutput#0" expanded="false" />
+            <element signature="method#prettyPrint#0;class#JsonOutput#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/json.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="222" column="31" lean-forward="true" selection-start-line="222" selection-start-column="31" selection-end-line="222" selection-end-column="31" />
+        <state relative-caret-position="295">
+          <caret line="214" column="20" lean-forward="false" selection-start-line="214" selection-start-column="12" selection-end-line="214" selection-end-column="20" />
           <folding>
             <element signature="n#ClientListReq#0;n#!!top" expanded="false" />
             <element signature="n#ClientListRes#0;n#!!top" expanded="false" />
@@ -822,6 +819,43 @@
             <element signature="n#DealRes#0;n#!!top" expanded="false" />
             <element signature="n#PositionRes#0;n#!!top" expanded="false" />
             <element signature="n#ProfitRes#0;n#!!top" expanded="false" />
+            <element signature="n#:&quot;messageName&quot;,&#10;                props:[#0;n#!!top" expanded="false" />
+            <element signature="n#:&quot;messageName&quot;,&#10;                props:[#1;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dirIn/helloworld.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="71" />
+          <folding>
+            <element signature="n#InnerMessage#0;n#!!top" expanded="false" />
+            <element signature="n#PageNo#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GeneratorJava.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="327" column="0" lean-forward="false" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
+          <folding>
+            <element signature="e#354#387#0" expanded="false" />
+            <element signature="n#!!block;n#generateController#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#4239#5223#0" expanded="false" />
+            <element signature="n#!!block;n#generateRouteIndexFile#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#10148#10168#0" expanded="false" />
+            <element signature="e#10237#10332#0" expanded="false" />
+            <element signature="e#10396#10554#0" expanded="false" />
+            <element signature="e#10598#10847#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="e#12012#14899#0" expanded="false" />
+            <element signature="e#14975#15158#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#GeneratorJava#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#GeneratorJava#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -855,7 +889,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>groovy-2.4.15</last-edited>
+          <last-edited>lib</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

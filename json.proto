@@ -207,7 +207,7 @@ message PRRes {
 var rule = "";  //编写proto文件的规则
 
 var protos = [{
-    package:"packageName",
+    package:"packageName", // package关键字不能做属性名使用
     services:[
         {
             service:"serviceName",
@@ -225,13 +225,7 @@ var protos = [{
                                 property:"propName",
                                 type:"propType",     //string,int32,array,message...
                                 describe:"propertyDescribe",
-                                props:[          //type===message的时候才有数据
-                                    {
-                                        property:"propName",
-                                        type:"propType",     //string,int32,array,message...
-                                        describe:"propertyDescribe",
-                                    }
-                                ]
+
                             }
                         ]
                     }

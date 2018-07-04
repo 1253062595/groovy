@@ -1,7 +1,12 @@
-import groovy.json.JsonBuilder
-import groovy.json.JsonOutput
+import groovy.json.JsonGenerator
 
+
+// 规则---repeated的message全部写外部，即message不包含message，并且repeated的message写在包含它的message的前边
 class GeneratorJava {
+
+    static Map<String, MessageSimple> messageMap = new HashMap() // messageName, messageJsonBody
+
+    static generator = new JsonGenerator.Options().excludeNulls().build()
 
     static void main(String[] args) {
 
@@ -72,9 +77,12 @@ class GeneratorJava {
 //        generateRouteFile(dirProto, dirOutRoute)
 //        generateRouteIndexFile(dirOutRoute, dirOutRoute)
 
-        Map<String, String> messageMap = new HashMap() // messageName, messageJsonBody
-
         def dirIn = new File("/Users/jys/groovy/projects/p2js/dirIn")
+
+        def fileJson = new File(dirIn, "json.js")
+        if (fileJson.exists()) {
+            fileJson.delete()
+        }
         parseToJson(dirIn)
 
     }
@@ -233,7 +241,7 @@ class GeneratorJava {
         outFile.append("\n")
     }
 
-    //首字母转小写
+    // ==================== 首字母转小写
     static String toLowerCaseFirstC(String s) {
         if (Character.isLowerCase(s.charAt(0)))
             return s;
@@ -241,7 +249,7 @@ class GeneratorJava {
             return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
     }
 
-    //首字母转大写
+    // ==================== 首字母转大写
     static String toUpperCaseFirstOne(String s) {
         if (Character.isUpperCase(s.charAt(0)))
             return s;
@@ -249,7 +257,12 @@ class GeneratorJava {
             return (new StringBuilder()).append(Character.toUpperCase(s.charAt(0))).append(s.substring(1)).toString();
     }
 
+    // ==================== 转json
     static void parseToJson(File dirIn) {
+
+        FinalJsonFile finalJsonFile = new FinalJsonFile()
+        ArrayList<ServiceSimple> listServiceSimple = new ArrayList<>()
+
         // 1 遍历dirIn中proto文件
         dirIn.eachFile {
 
@@ -259,11 +272,15 @@ class GeneratorJava {
             def indexEnd = 0 // message end index
             def index = 0
 
+            ServiceSimple serviceSimple = new ServiceSimple()
+            ArrayList<ServiceProp> listServiceProp = new ArrayList<>()
+            ServiceProp serviceProp
+
             // 2 读取文件
             def protoFileLines = it.readLines("utf-8")
             protoFileLines.each {
 
-                // 规则---repeated的message全部写外部，即message不包含message，并且repeated的message写在包含它的message的前边
+                // deal with message
                 // 开始
                 if (it.startsWith("message")) {
                     indexStart = index
@@ -287,13 +304,38 @@ class GeneratorJava {
                 }
 
                 index++
+
+                // deal with package and services
+                serviceProp = new ServiceProp()
+                def packageName
+                def serviceName
+
+                if (it.trim().startsWith("package")) {
+                    packageName = it.substring(8, it.length() - 1)
+                    println "packageName ---" + packageName
+                    serviceSimple.packageName = packageName
+                }
+
+                if (it.startsWith("service")) {
+                    serviceName = toLowerCaseFirstC(it.substring(8, it.length() - 2))
+                    println "serviceName ---" + serviceName+"---"
+                    serviceProp.service = serviceName
+                    serviceProp.path = packageName+"/"+serviceName
+                }
+
+                if (it.trim().startsWith("rpc")){
+                    //rpc SayHello (HelloRequest) returns (HelloReply) {} // des-SayHello
+
+                }
+
+
+
             }
         }
     }
 
     static void parseMessageBlock(messageLines) {
-
-        def messageSingle = new MessageSingle()
+        def messageSingle = new MessageSimple()
         def messageProps = new ArrayList<MessageProp>()
 
         messageLines.each {
@@ -301,7 +343,11 @@ class GeneratorJava {
                 // 开始
                 def messageNameLine = it.split(" ")
                 if (messageNameLine.size() >= 2) {
-                    messageSingle.message = messageNameLine[1].trim()
+                    def messageName = messageNameLine[1].trim()
+                    if ("{".equals(messageName.substring(messageName.length() - 1, messageName.length()))) {
+                        messageName = messageName.substring(0, messageName.length() - 1)
+                    }
+                    messageSingle.message = messageName
                 }
             } else if (it.trim().startsWith("}")) {
                 // 结束
@@ -311,20 +357,47 @@ class GeneratorJava {
                 if (it.contains(";")) {
                     def messageProp = new MessageProp()
 
-                    def propLine = it.split(";")
-                    def typeAndName = propLine[0].trim().split("=")[0].trim().split(" ")
+                    if (it.trim().startsWith("repeated")) {
+                        def propLine = it.split(";")
+                        def typeAndName = propLine[0].trim().split("=")[0].trim().split(" ")
 
-                    messageProp.property = typeAndName[1].trim()
-                    messageProp.type = typeAndName[0].trim()
+                        messageProp.type = "array<" + typeAndName[1].trim() + ">"
+                        messageProp.property = typeAndName[2].trim()
 
-                    if (propLine.size() > 1) {
-                        def desc = propLine[1].trim()
-                        if (desc.contains("//")) {
-                            def start = desc.indexOf("//")
-                            messageProp.describe = desc.substring(start + 2).trim()
+                        if (propLine.size() > 1) {
+                            def desc = propLine[1].trim()
+                            if (desc.contains("//")) {
+                                def start = desc.indexOf("//")
+                                messageProp.describe = desc.substring(start + 2).trim()
+                            }
+                        } else {
+                            messageProp.describe = ""
                         }
+
+                        if (messageMap.containsKey(typeAndName[1].trim())) {
+                            messageProp.props = messageMap.get(typeAndName[1].trim()).props
+                        }
+
                     } else {
-                        messageProp.describe = ""
+                        def propLine = it.split(";")
+                        def typeAndName = propLine[0].trim().split("=")[0].trim().split(" ")
+
+                        messageProp.property = typeAndName[1].trim()
+                        messageProp.type = typeAndName[0].trim()
+
+                        if (propLine.size() > 1) {
+                            def desc = propLine[1].trim()
+                            if (desc.contains("//")) {
+                                def start = desc.indexOf("//")
+                                messageProp.describe = desc.substring(start + 2).trim()
+                            }
+                        } else {
+                            messageProp.describe = ""
+                        }
+
+                        if (messageMap.containsKey(messageProp.type)) {
+                            messageProp.props = messageMap.get(messageProp.type).props
+                        }
                     }
 
                     messageProps.add(messageProp)
@@ -333,8 +406,41 @@ class GeneratorJava {
         }
 
         if (null != messageSingle.message && null != messageSingle.props) {
-            def json = JsonOutput.toJson(messageSingle)
-            println "json string --- " + json
+            // def json = generator.toJson(messageSingle)
+            // println "json string --- " + json
+            messageMap.put(messageSingle.message, messageSingle)
         }
     }
+
+    // ==================== message
+    static class MessageSimple {
+        String message
+        ArrayList<MessageProp> props
+    }
+
+    static class MessageProp {
+        String property
+        String type
+        String describe
+        ArrayList<MessageProp> props
+    }
+
+    // ==================== service
+    static class FinalJsonFile {
+        ArrayList<ServiceSimple> list
+    }
+
+    static class ServiceSimple {
+        String packageName
+        ArrayList<ServiceProp> services
+    }
+
+    static class ServiceProp {
+        String service
+        String path
+        String describe
+        MessageSimple reqMessage
+        MessageSimple resMessage
+    }
 }
+
