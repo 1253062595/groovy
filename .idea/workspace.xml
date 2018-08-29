@@ -2,26 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f6426d-589a-4732-958e-8a247ef6402f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protos/client.proto" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/GeneratorJavaNotSupport.groovy" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dirIn/helloworld.proto" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$FinalJsonFile.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$MessageProp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$MessageSimple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$ServiceProp.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$ServiceSimple.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateController_closure1$_closure7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateController_closure1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteFile_closure2$_closure8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteFile_closure2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteIndexFile_closure3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_generateRouteIndexFile_closure4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_parseMessageBlock_closure6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_parseToJson_closure5$_closure9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava$_parseToJson_closure5.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GeneratorJava.groovy" afterPath="$PROJECT_DIR$/src/GeneratorTest.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJava.class" afterPath="$PROJECT_DIR$/out/production/p2js/GeneratorJava.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/JavaUseGroovy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/auth.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/base.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/login.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/org.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/permission.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/resource.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/simple.proto" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/proto/user.proto" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/json.proto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorJavaNotSupport.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/protos/base.proto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/protos/client.proto" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/GeneratorJavaNotSupport.groovy" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/p2js/GeneratorTest.class" afterPath="$PROJECT_DIR$/out/production/p2js/GeneratorTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/设置及规则.docx" afterPath="$PROJECT_DIR$/设置及规则.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GeneratorGroovy.groovy" afterPath="$PROJECT_DIR$/src/GeneratorGroovy.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GeneratorJava.groovy" afterPath="$PROJECT_DIR$/src/GeneratorJava.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GeneratorTest.groovy" afterPath="$PROJECT_DIR$/src/GeneratorTest.groovy" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,21 +33,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GeneratorJava.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GeneratorJava.groovy">
+      <file leaf-file-name="ProtoParser.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/protoparse/ProtoParser.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3859">
-              <caret line="249" column="51" lean-forward="false" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
+            <state relative-caret-position="458">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding>
+                <element signature="e#20#52#0" expanded="true" />
+                <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#MessageProp#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#ServiceSimple#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#ServiceProp#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseMessage#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#resetCondition#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseSimpleMessage#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="e#5543#10416#0" expanded="false" />
+                <element signature="n#!!block;n#parseToJson#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseToDTO#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="e#20398#21470#0" expanded="false" />
+                <element signature="e#21506#21679#0" expanded="false" />
+                <element signature="e#21808#22528#0" expanded="false" />
+                <element signature="e#22596#23557#0" expanded="false" />
+                <element signature="n#!!block;n#parseType#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseType2#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseAttrName#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseToService#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="n#!!block;n#parseEachFile#0;n#!!block;n#ProtoParser#0" expanded="false" />
+                <element signature="e#31495#31627#0" expanded="false" />
+                <element signature="n#!!block;n#parseTypeMessage#0;n#!!block;n#ProtoParser#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auth.proto" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/proto/auth.proto">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="636">
+              <caret line="164" column="31" lean-forward="false" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratorTest.groovy" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/GeneratorTest.groovy">
+      <file leaf-file-name="ResourceGroovyMethods.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.ideaLibSources/groovy-2.5.0-sources.jar!/org/codehaus/groovy/runtime/ResourceGroovyMethods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="265">
+              <caret line="2006" column="33" lean-forward="false" selection-start-line="2006" selection-start-column="33" selection-end-line="2006" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="File.java" pinned="false" current-in-tab="false">
+        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/File.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="346">
+              <caret line="359" column="45" lean-forward="false" selection-start-line="359" selection-start-column="45" selection-end-line="359" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -67,7 +113,28 @@
       <find>message and enum</find>
       <find>generator</find>
       <find>TimeLineType</find>
+      <find>JsonGenerator</find>
+      <find>replace</find>
+      <find>resetCondition</find>
+      <find>messageArray</find>
+      <find>SubMenu</find>
+      <find>contains</find>
+      <find>parseType2</find>
+      <find>println</find>
+      <find>dto.append</find>
+      <find>bufferedWriter.write</find>
+      <find>bufferedWriter.writeLine</find>
+      <find>bufferedWriter.append</find>
+      <find>// bufferedWriter.append</find>
+      <find>fileOut.append</find>
     </findStrings>
+    <replaceStrings>
+      <replace>bufferedWriter.write</replace>
+      <replace>bufferedWriter.writeLine</replace>
+      <replace>bufferedWriter.append</replace>
+      <replace>// bufferedWriter.append</replace>
+      <replace>printWriter.append</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -80,40 +147,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Generator.java" />
-        <option value="$PROJECT_DIR$/helloworld" />
-        <option value="$PROJECT_DIR$/src/js/hellowrld.js" />
-        <option value="$PROJECT_DIR$/src/proto/helloworld.proto" />
-        <option value="$PROJECT_DIR$/src/proto/helloworld2.proto" />
-        <option value="$PROJECT_DIR$/src/proto/helloworld3.proto" />
-        <option value="$PROJECT_DIR$/src/cls/helloworld.js" />
-        <option value="$PROJECT_DIR$/src/Generator2.groovy" />
+        <option value="$PROJECT_DIR$/src/generator/GeneratorJava.groovy" />
         <option value="$PROJECT_DIR$/src/Generator.groovy" />
-        <option value="$PROJECT_DIR$/route/helloworld.js" />
-        <option value="$PROJECT_DIR$/dirOut2/helloworld.js" />
-        <option value="$PROJECT_DIR$/controller/helloworld.js" />
-        <option value="$PROJECT_DIR$/route/index.js" />
-        <option value="$PROJECT_DIR$/dirIn/helloworld1.proto" />
-        <option value="$PROJECT_DIR$/route/helloworld1.js" />
-        <option value="$PROJECT_DIR$/fromHZY/client.proto" />
-        <option value="$PROJECT_DIR$/src/GeneratorGroovy.groovy" />
-        <option value="$PROJECT_DIR$/src/MessageProp.groovy" />
-        <option value="$PROJECT_DIR$/src/MessageSingle.groovy" />
-        <option value="$PROJECT_DIR$/json.proto" />
-        <option value="$PROJECT_DIR$/dirIn/json.js" />
-        <option value="$PROJECT_DIR$/src/GeneratorJavaNotSupport.groovy" />
-        <option value="$PROJECT_DIR$/dirIn/helloworld.proto" />
-        <option value="$PROJECT_DIR$/src/GeneratorJavaSupport.groovy" />
-        <option value="$PROJECT_DIR$/dirIn/base.proto" />
-        <option value="$PROJECT_DIR$/dirIn/helloworld2.proto" />
-        <option value="$PROJECT_DIR$/protos/base.proto" />
-        <option value="$PROJECT_DIR$/protos/contextinfo.proto" />
-        <option value="$PROJECT_DIR$/protos/home.proto" />
+        <option value="$APPLICATION_CONFIG_DIR$/idea.properties" />
+        <option value="$PROJECT_DIR$/protos/streamtest.proto" />
         <option value="$PROJECT_DIR$/protos/client.proto" />
-        <option value="$PROJECT_DIR$/dirOutRoute/json.js" />
-        <option value="$PROJECT_DIR$/out2/json.js" />
+        <option value="$PROJECT_DIR$/protos/common.proto" />
+        <option value="$PROJECT_DIR$/protos/incomecal.proto" />
+        <option value="$PROJECT_DIR$/protos/me.proto" />
+        <option value="$PROJECT_DIR$/protos/message.proto" />
+        <option value="$PROJECT_DIR$/protos/product.proto" />
+        <option value="$PROJECT_DIR$/protos/show.proto" />
+        <option value="$PROJECT_DIR$/protos/sign.proto" />
+        <option value="$PROJECT_DIR$/routes/json.js" />
+        <option value="$PROJECT_DIR$/protos/usero.proto" />
+        <option value="$PROJECT_DIR$/protos/base.proto" />
+        <option value="$PROJECT_DIR$/protos/org.proto" />
+        <option value="$PROJECT_DIR$/protos/permission.proto" />
+        <option value="$PROJECT_DIR$/protos/resource.proto" />
+        <option value="$PROJECT_DIR$/protos/user.proto" />
+        <option value="$PROJECT_DIR$/protos/login.proto" />
+        <option value="$PROJECT_DIR$/protos/auth.proto" />
+        <option value="$PROJECT_DIR$/src/GeneratorJavaO.groovy" />
         <option value="$PROJECT_DIR$/src/GeneratorJava.groovy" />
-        <option value="$PROJECT_DIR$/src/GeneratorTest.groovy" />
+        <option value="$PROJECT_DIR$/out_zjx/dto/base/PageNo.java" />
+        <option value="$PROJECT_DIR$/out_zjx/dto/base/Empty.java" />
+        <option value="$PROJECT_DIR$/out_zjx/dto/base/FileItem.java" />
+        <option value="$PROJECT_DIR$/out_zjx/dto/base/UserToken.java" />
+        <option value="$PROJECT_DIR$/out_zjx/dto/base/PermAllowByResInfo.java" />
+        <option value="$PROJECT_DIR$/out_zjx/dto/base/PermAllowByResRes.java" />
+        <option value="$PROJECT_DIR$/src/dto/base/PermAllowByResRes.java" />
+        <option value="$PROJECT_DIR$/proto/base.proto" />
+        <option value="$PROJECT_DIR$/src/dto/permission/PermAllowByResRes.java" />
+        <option value="$PROJECT_DIR$/proto/auth.proto" />
+        <option value="$PROJECT_DIR$/proto/org.proto" />
+        <option value="$PROJECT_DIR$/proto/resource.proto" />
+        <option value="$PROJECT_DIR$/proto/user.proto" />
+        <option value="$PROJECT_DIR$/src/SimpleService.java" />
+        <option value="$PROJECT_DIR$/proto/simple.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jinhui365/crm/dto/auth/AddRowAuthReqDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jinhui365/crm/dto/auth/AddColumnAuthReqDto.java" />
+        <option value="$PROJECT_DIR$/proto/SimpleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jinhui365/crm/service/AuthService.java" />
+        <option value="$PROJECT_DIR$/proto/permission.proto" />
+        <option value="$PROJECT_DIR$/proto/login.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jinhui365/crm/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/login/TopMenuDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/proto/login.proto" />
+        <option value="$PROJECT_DIR$/src/main/proto/auth.proto" />
+        <option value="$PROJECT_DIR$/Text.java" />
+        <option value="$PROJECT_DIR$/src/protoparse/ProtoParser.groovy" />
       </list>
     </option>
   </component>
@@ -131,10 +215,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="29" />
-    <option name="width" value="1564" />
-    <option name="height" value="985" />
+    <option name="x" value="17" />
+    <option name="y" value="28" />
+    <option name="width" value="1920" />
+    <option name="height" value="988" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -152,9 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -170,39 +251,59 @@
             </path>
             <path>
               <item name="proto2js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proto2js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2js" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="protoparse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proto2js" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="EvictableCache&#9;PSI&#9;JAVA://org.codehaus.groovy.runtime.memoize.EvictableCache" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/proto" />
+      <recent name="$PROJECT_DIR$/src/main" />
+      <recent name="$PROJECT_DIR$/proto" />
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/protos" />
-      <recent name="$PROJECT_DIR$/dirIn" />
-      <recent name="$PROJECT_DIR$/controller" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/proto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="excelparse" />
+      <recent name="protoparse" />
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/cls" />
-      <recent name="$PROJECT_DIR$/src/js" />
-      <recent name="$PROJECT_DIR$/src/proto" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/proto" />
+      <recent name="$PROJECT_DIR$/protos" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/mock-data/routes" />
+      <recent name="$PROJECT_DIR$/routes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -217,10 +318,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GeneratorTest">
-    <configuration name="GeneratorGroovy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="GeneratorGroovy" />
+  <component name="RunManager" selected="Application.ProtoParser">
+    <configuration name="ExcelParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="excelparse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="excelparse.ExcelParser" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -232,9 +338,9 @@
       <module name="p2js" />
       <envs />
     </configuration>
-    <configuration name="GeneratorJavaSupport" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Generator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="GeneratorJavaSupport" />
+      <option name="MAIN_CLASS_NAME" value="Generator" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -246,9 +352,47 @@
       <module name="p2js" />
       <envs />
     </configuration>
-    <configuration name="GeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GeneratorJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="GeneratorTest" />
+      <option name="MAIN_CLASS_NAME" value="GeneratorJava" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="p2js" />
+      <envs />
+    </configuration>
+    <configuration name="GeneratorJava" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="generator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="generator.GeneratorJava" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="p2js" />
+      <envs />
+    </configuration>
+    <configuration name="ProtoParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="protoparse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="protoparse.ProtoParser" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -340,16 +484,18 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Application.GeneratorJavaSupport" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GeneratorTest" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GeneratorGroovy" />
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Application.ProtoParser" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ExcelParser" />
+      <item index="2" class="java.lang.String" itemvalue="Application.GeneratorJava" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Generator" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Application.GeneratorTest" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GeneratorGroovy" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GeneratorJavaSupport" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.ProtoParser" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GeneratorJava" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Generator" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ExcelParser" />
       </list>
     </recent_temporary>
   </component>
@@ -371,46 +517,63 @@
       <workItem from="1530238927668" duration="285000" />
       <workItem from="1530239242932" duration="249000" />
       <workItem from="1530239533184" duration="210000" />
-      <workItem from="1530500066819" duration="85150000" />
+      <workItem from="1530500066819" duration="85254000" />
+      <workItem from="1531105376199" duration="67000" />
+      <workItem from="1531189873143" duration="12207000" />
+      <workItem from="1531791473789" duration="6387000" />
+      <workItem from="1532913284482" duration="18785000" />
+      <workItem from="1533193024993" duration="622000" />
+      <workItem from="1533193702784" duration="5434000" />
+      <workItem from="1533199982352" duration="731000" />
+      <workItem from="1533256791979" duration="41068000" />
+      <workItem from="1534124300984" duration="14958000" />
+      <workItem from="1534485135914" duration="1213000" />
+      <workItem from="1534753326597" duration="5681000" />
+      <workItem from="1534819258742" duration="9245000" />
+      <workItem from="1534902518099" duration="2609000" />
+      <workItem from="1535354359996" duration="3439000" />
+      <workItem from="1535416612084" duration="3307000" />
+      <workItem from="1535446097123" duration="373000" />
+      <workItem from="1535508914275" duration="3898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106526000" />
+    <option name="totallyTimeSpent" value="236654000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="29" width="1564" height="985" extended-state="0" />
+    <frame x="17" y="28" width="1920" height="988" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4004603" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32796317" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264368" sideWeight="0.4680511" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43613347" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012643678" sideWeight="0.28541002" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.012643678" sideWeight="0.71459" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35673186" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20236531" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29919448" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35538116" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22896698" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23678161" sideWeight="0.48136315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.396861" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,393 +584,243 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="29" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Generator.java" />
-    <entry file="file://$PROJECT_DIR$/src/proto/hw.proto" />
-    <entry file="file://$PROJECT_DIR$/hel.js" />
-    <entry file="file://$PROJECT_DIR$/helloworld" />
-    <entry file="file://$PROJECT_DIR$/helloworld.js" />
-    <entry file="file://$PROJECT_DIR$/src/proto/helloworld.proto" />
-    <entry file="file://$PROJECT_DIR$/src/proto/helloworld2.proto" />
-    <entry file="file://$PROJECT_DIR$/src/proto/helloworld3.proto" />
-    <entry file="file://$PROJECT_DIR$/src/js/hellowrld.js" />
-    <entry file="file://$PROJECT_DIR$/src/cls/helloworld.js" />
-    <entry file="file://$PROJECT_DIR$/dirOut/helloworld.js" />
-    <entry file="file://$PROJECT_DIR$/dirOut/helloworld2.js" />
-    <entry file="file://$PROJECT_DIR$/helloworld.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirOut1/helloworld.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirOut2/helloworld.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fromHZY/Generator.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="161" column="19" lean-forward="true" selection-start-line="161" selection-start-column="19" selection-end-line="165" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirOut3/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route/helloworld.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/helloworld.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/helloworld1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route/helloworld1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirIn/helloworld1.proto">
+    <entry file="file://$PROJECT_DIR$/../../temp/src/main/java/com/jinhui365/crm/dto/permission/PermSetByResResDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/main/java/com/jinhui365/crm/dto/auth/RowAuthListResDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/main/java/com/jinhui365/crm/dto/base/EmptyDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/main/java/com/jinhui365/crm/dto/auth/AddColumnAuthReqDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/dto/auth/RowAuthListResDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/dto/resource/ResInfoSimpleDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/proto/org.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/p2js_note.txt">
+    <entry file="file://$PROJECT_DIR$/src/main/proto/simple.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="22" column="22" lean-forward="false" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fromHZY/client.proto">
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/service/LoginService.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/service/AuthService.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/dto/permission/PermSetByResResDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/dto/auth/AddColumnAuthReqDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/dto/auth/AddColumnAuthReqDto.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/service/AuthService.java" />
+    <entry file="file://$PROJECT_DIR$/../../temp/src/com/jinhui365/crm/dto/permission/PermSetByResResDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/proto/permission.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="209" column="26" lean-forward="true" selection-start-line="209" selection-start-column="26" selection-end-line="209" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="269">
+          <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/service/AuthService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/proto/SimpleService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/service/LoginService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/login/SubMenuDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/SimpleService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/OrgService.java" />
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MessageProp.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="4" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MessageSingle.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../groovy-2.4.15/lib/groovy-json-2.4.15.jar!/groovy/json/JsonDelegate.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../groovy-2.4.15/lib/groovy-json-2.4.15.jar!/groovy/json/JsonOutput.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="487" column="42" lean-forward="false" selection-start-line="487" selection-start-column="29" selection-end-line="487" selection-end-column="42" />
+        <state relative-caret-position="219">
+          <caret line="2420" column="11" lean-forward="false" selection-start-line="2420" selection-start-column="11" selection-end-line="2420" selection-end-column="19" />
           <folding>
-            <element signature="method#toJson#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#1;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#2;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#3;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#4;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#5;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#6;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#7;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#8;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#9;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#10;class#JsonOutput#0" expanded="false" />
-            <element signature="method#toJson#11;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeNumber#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeObject#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#getObjectProperties#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeCharSequence#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeDate#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeArray#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeMap#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#writeIterator#0;class#JsonOutput#0" expanded="false" />
-            <element signature="method#prettyPrint#0;class#JsonOutput#0" expanded="false" />
+            <element signature="e#94598#94599#0" expanded="false" />
+            <element signature="e#94636#94637#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneratorJavaNotSupport.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/org/OrgInfoDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/permission/PermAllowByIdInfoDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/permission/PermSetByResResDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/PermissionService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/LoginService.java" />
+    <entry file="file://$PROJECT_DIR$/protos/login.proto" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/login/TopMenuDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/login/MenuTreeDto.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/proto/login.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="744" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneratorGroovy.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="225" column="7" lean-forward="false" selection-start-line="221" selection-start-column="6" selection-end-line="225" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-329">
-          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="4" />
-          <folding>
-            <element signature="n#ClientListReq#0;n#!!top" expanded="false" />
-            <element signature="n#ClientListRes#0;n#!!top" expanded="false" />
-            <element signature="n#ClientReq#0;n#!!top" expanded="false" />
-            <element signature="n#ChangeFocusStateReq#0;n#!!top" expanded="false" />
-            <element signature="n#ClientQueryReq#0;n#!!top" expanded="false" />
-            <element signature="n#ClientDetailRes#0;n#!!top" expanded="false" />
-            <element signature="n#ClientNAssetRes#0;n#!!top" expanded="false" />
-            <element signature="n#DealRes#0;n#!!top" expanded="false" />
-            <element signature="n#PositionRes#0;n#!!top" expanded="false" />
-            <element signature="n#ProfitRes#0;n#!!top" expanded="false" />
-            <element signature="n#TimeLineRes#0;n#!!top" expanded="false" />
-            <element signature="n#CapitalRes#0;n#!!top" expanded="false" />
-            <element signature="n#MPositionRes#0;n#!!top" expanded="false" />
-            <element signature="n#AttornRes#0;n#!!top" expanded="false" />
-            <element signature="n#PurchaseRes#0;n#!!top" expanded="false" />
-            <element signature="n#CardRes#0;n#!!top" expanded="false" />
-            <element signature="n#PRReq#0;n#!!top" expanded="false" />
-            <element signature="n#PRRes#0;n#!!top" expanded="false" />
-            <element signature="n#:&quot;messageName&quot;,&#10;                props:[#1;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/util/concurrent/CopyOnWriteArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="90" column="36" lean-forward="true" selection-start-line="90" selection-start-column="36" selection-end-line="90" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1067">
-          <caret line="839" column="31" lean-forward="true" selection-start-line="839" selection-start-column="31" selection-end-line="839" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirIn/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="3813" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneratorJavaSupport.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirIn/helloworld.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="30" column="17" lean-forward="false" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirIn/base.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirIn/helloworld2.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="75" lean-forward="false" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protos/home.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="207" column="36" lean-forward="true" selection-start-line="207" selection-start-column="36" selection-end-line="207" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protos/contextinfo.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protos/base.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dirOutRoute/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="19" lean-forward="false" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/route11/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out123/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out2/json.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protos/client.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="33" column="42" lean-forward="true" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-          <folding>
-            <element signature="n#TimeLineType#0;n#!!top" expanded="false" />
-            <element signature="n#ClientListReq#0;n#!!top" expanded="false" />
-            <element signature="n#ClientReq#0;n#!!top" expanded="false" />
-            <element signature="n#ChangeFocusStateReq#0;n#!!top" expanded="false" />
-            <element signature="n#ClientQueryReq#0;n#!!top" expanded="false" />
-            <element signature="n#ClientDetailInfo#0;n#ClientDetailRes#0;n#!!top" expanded="false" />
-            <element signature="n#AssetsDetail#0;n#ClientDetailRes#0;n#!!top" expanded="false" />
-            <element signature="n#ClientNAssetRes#0;n#!!top" expanded="false" />
-            <element signature="n#DealRes#0;n#!!top" expanded="false" />
-            <element signature="n#PositionRes#0;n#!!top" expanded="false" />
-            <element signature="n#ProfitRes#0;n#!!top" expanded="false" />
-            <element signature="n#TimeLineRes#0;n#!!top" expanded="false" />
-            <element signature="n#CapitalRes#0;n#!!top" expanded="false" />
-            <element signature="n#MPositionRes#0;n#!!top" expanded="false" />
-            <element signature="n#AttornRes#0;n#!!top" expanded="false" />
-            <element signature="n#PurchaseRes#0;n#!!top" expanded="false" />
-            <element signature="n#CardRes#0;n#!!top" expanded="false" />
-            <element signature="n#PRReq#0;n#!!top" expanded="false" />
-            <element signature="n#PRRes#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="479">
+          <caret line="41" column="33" lean-forward="false" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GeneratorJava.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3859">
-          <caret line="249" column="51" lean-forward="false" selection-start-line="249" selection-start-column="51" selection-end-line="249" selection-end-column="51" />
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GeneratorTest.groovy">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/ResourceService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/proto/base.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="245">
+          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/src.zip!/java/io/File.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="359" column="45" lean-forward="false" selection-start-line="359" selection-start-column="45" selection-end-line="359" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.ideaLibSources/groovy-2.5.0-sources.jar!/org/codehaus/groovy/runtime/ResourceGroovyMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="2006" column="33" lean-forward="false" selection-start-line="2006" selection-start-column="33" selection-end-line="2006" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/user/AddLoginReqDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/user/UserLoginMapDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/base/EmptyDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/login/AuthDataResDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/org/DeleteOrgReqDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/auth/ColumnAuthInfoDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/auth/AuthTreeResDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/auth/AddRowAuthReqDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/proto/auth.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="164" column="31" lean-forward="false" selection-start-line="164" selection-start-column="31" selection-end-line="164" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/dto/auth/AddColumnAuthReqDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jinhui365/crm/appserver/service/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/protoparse/ProtoParser.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#20#52#0" expanded="true" />
+            <element signature="n#!!block;n#toLowerCaseFirstC#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#toUpperCaseFirstOne#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#MessageSimple#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#MessageProp#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#ServiceSimple#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#ServiceProp#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessage#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#resetCondition#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseSimpleMessage#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseMessageBlock#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="e#5543#10416#0" expanded="false" />
+            <element signature="n#!!block;n#parseToJson#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseToDTO#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="e#20398#21470#0" expanded="false" />
+            <element signature="e#21506#21679#0" expanded="false" />
+            <element signature="e#21808#22528#0" expanded="false" />
+            <element signature="e#22596#23557#0" expanded="false" />
+            <element signature="n#!!block;n#parseType#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseType2#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseAttrName#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseToService#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="n#!!block;n#parseEachFile#0;n#!!block;n#ProtoParser#0" expanded="false" />
+            <element signature="e#31495#31627#0" expanded="false" />
+            <element signature="n#!!block;n#parseTypeMessage#0;n#!!block;n#ProtoParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="0" column="91192" lean-forward="true" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="98421" />
           <folding />
         </state>
       </provider>

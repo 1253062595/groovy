@@ -1,0 +1,46 @@
+syntax = "proto3";
+package base;
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "BaseProto";
+
+
+message Empty {
+}
+// 页码
+message PageNo {
+    int32 page_no = 1;
+}
+
+message PageInfoReq {
+    int32 page_no = 1;
+    int32 page_size = 2;
+}
+message PageInfoRes {
+    int32 total_count = 1;
+}
+
+
+message FileItem {
+    string file_id = 1;
+    string file_name = 2;
+    string rec_gen_time = 3; // 创建时间
+    string absolute_path = 5; // 相对路径
+    string file_url = 6; // 下载附件地址
+}
+
+message UserToken {
+    string login_id = 1;
+    string token = 2;
+    int64 create_time = 3;
+    string os_version = 4;
+    string app_version = 5;
+    string user_id = 6;
+    string ipv4 = 7;
+    string ipv6 = 8;
+    string mac = 9;
+    string device_no = 10;
+    string manufacture = 11;
+    string brand = 12;
+    string model = 13;
+ }

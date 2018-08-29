@@ -1,0 +1,409 @@
+syntax = "proto3";
+package permission;
+import "base.proto";
+import "resource.proto";
+
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "PermissionProto";
+//权限设置
+service PermissionRpc {
+    rpc QueryAllowResource (PermSetResourceReq) returns (resource.QueryResourceRes) {
+    } //根据资源类型，查询可授权、设置的菜单
+    rpc QueryPermAllowByResource (PermByResourceReq) returns (PermAllowByResourceRes) {
+    } //按照资源查询授权设置
+    rpc AddPermAllowSetByResource (PermAllowSetResourceReq) returns (base.Empty) {
+    } //新增授权设置
+
+    rpc QueryRoleInfo (RoleInfoByNameReq) returns (RoleInfoRes) {
+    } //根据角色名称获取角色信息
+    rpc QueryPermAllowByRole (PermSetRoleReq) returns (PermAllowByRoleRes) {
+    } //按照角色查询授权设置
+    rpc AddPermAllowSetByRole (PermAllowSetRoleReq) returns (base.Empty) {
+    } //按照角色新增授权设置
+
+    rpc QueryPermAllowById (PermResourceByIdReq) returns (PermAllowByIdInfo) {
+    } //根据角色、资源查询授权详细
+    rpc UpdatePermAllowById (PermAllowByIdInfo) returns (base.Empty) {
+    } //更新授权设置
+    rpc DelPermAllowById (PermResourceByIdReq) returns (base.Empty) {
+    } //删除授权设置
+
+    rpc QueryPermSetByResource (PermByResourceReq) returns (PermSetByResourceRes) {
+    } //按照资源查询权限设置
+    rpc AddPermSetByResource (PermSetByResourceReq) returns (base.Empty) {
+    } //按照资源进行权限设置
+
+    rpc QueryPermSetByRole (PermSetRoleReq) returns (PermSetByRoleRes) {
+    } //按照角色查询权限设置
+    rpc PermSetByRole (PermSetByRoleReq) returns (base.Empty) {
+    } //按照角色进行权限设置
+
+    rpc QueryPermSetById (PermResourceByIdReq) returns (PermSetByIdInfo) {
+    } //根据角色、资源查询权限设置详细
+    rpc UpdatePermSetById (PermSetByIdInfo) returns (base.Empty) {
+    } //更新权限设置
+    rpc DelPermSetById (PermResourceByIdReq) returns (base.Empty) {
+    } //删除权限设置
+
+    rpc PermSetTest (PermSetTestReq) returns (base.Empty) {
+    } //测试,通过sql拼接rule,指标表，进行sql的校验
+    rpc QueryUserPermInfo (UserPermInfoReq) returns (UserPermInfoRes) {
+    } //获取个人信息
+    rpc QueryPermResourceSet (QueryPermSetReq) returns (QueryPermSetRes) {
+    } //获取个人权限设置
+    //------------------------------数据权限设置---------------------------------------------
+    rpc QueryDataPermByType (DataPermByTypeReq) returns (DataPermRes) {
+    } //根据资源类型，查询可授权、设置的数据权限
+    rpc QueryDataPermAllowByData (DataPermByDataReq) returns (DataPermAllowByDataRes) {
+    } //按照权限查询数据授权设置
+    rpc AddDataPermAllowSetByData (DataPermSetByDataReq) returns (base.Empty) {
+    } //按照权限新增授权设置
+
+    rpc QueryDataPermAllowByRole (DataPermByRoleReq) returns (DataPermAllowByRoleRes) {
+    } //按照角色查询数据授权设置
+    rpc AddDataPermAllowSetByRole (DataPermSetByRoleReq) returns (base.Empty) {
+    } //按照角色新增授权设置
+
+    rpc QueryDataPermAllowById (DataPermByIdReq) returns (DataPermAllowByIdInfo) {
+    } //根据角色、权限定义ID查询授权详细
+    rpc UpdateDataPermAllowById (DataPermAllowByIdInfo) returns (base.Empty) {
+    } //更新数据权限授权设置
+    rpc DelDataPermAllowById (DataPermByIdReq) returns (base.Empty) {
+    } //删除数据权限授权设置
+
+    rpc QueryDataPermByData (DataPermByDataReq) returns (DataPermByDataRes) {
+    } //按照权限查询数据权限设置
+    rpc AddDataPermSetByData (DataPermSetByDataReq) returns (base.Empty) {
+    } //按照权限新增权限设置
+
+    rpc QueryDataPermByRole (DataPermByRoleReq) returns (DataPermByRoleRes) {
+    } //按照角色查询数据权限设置
+    rpc AddDataPermSetByRole (DataPermSetByRoleReq) returns (base.Empty) {
+    } //按照角色新增权限设置
+
+    rpc QueryDataPermById (DataPermByIdReq) returns (DataPermByIdReqInfo) {
+    } //根据角色、权限定义ID查询权限设置详细
+    rpc UpdateDataPermById (DataPermByIdReqInfo) returns (base.Empty) {
+    } //更新数据权限设置
+    rpc DelDataPermById (DataPermByIdReq) returns (base.Empty) {
+    } //删除数据权限设置
+
+    rpc QueryDataPermSet (QueryDataPermSetReq) returns (QueryDataPermSetRes) {
+    } //获取个人数据权限设置
+
+}
+message PermSetResourceReq {
+    string res_id = 1; //资源ID
+}
+message PermByResourceReq {
+    string res_id = 1;
+    string role_name = 2; //角色名称
+    string status = 3; //状态
+    base.PageInfoReq page_req = 4; //分页
+}
+message PermAllowByResourceRes {
+    repeated PermAllowByResourceInfo allow_res_list = 1;
+    base.PageInfoRes page_res = 2;
+    message PermAllowByResourceInfo {
+        string res_id = 1; //资源ID
+        string role_name = 2; //角色名称//角色名称
+        int32 role_id = 3; //角色ID
+        string allow_status = 4; //授权状态1已授权2未授权//状态
+        string role_remark = 5; //角色说明//角色说明
+        string allow_date = 6; //授权时限//授权时限
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string res_name = 8; //资源名称
+    }
+}
+message PermAllowSetResourceReq {
+    string res_info = 1; //资源ID
+    string date_begin = 2; //开始日期
+    string date_end = 3; //结束日期
+    repeated string role_list = 4; //角色IDs
+}
+message RoleInfoByNameReq {
+    string role_name = 1; //角色名字
+    base.PageInfoReq page_req = 2; //分页
+}
+message RoleInfoRes {
+    repeated RoleInfoList role_list = 1;
+    base.PageInfoRes page_res = 2; //分页
+    message RoleInfoList {
+        int32 role_id = 1; //角色编号
+        string role_name = 2; //角色名字//角色名字
+        string role_remark = 3; //角色说明//说明
+    }
+}
+message PermSetRoleReq {
+    string role_id = 1; //角色ID
+    string res_type = 2; //资源类型
+    string parent_res = 3; //父级资源
+    string status = 4; //状态
+}
+
+message PermAllowByRoleRes {
+    repeated PermAllowByRoleInfo allow_role_list = 1;
+    message PermAllowByRoleInfo {
+        int32 role_id = 1; //角色ID
+        string res_id = 2; //资源ID
+        string res_name = 3; //资源名称//资源名称
+        string allow_status = 4; //授权状态1已授权2未授权//状态
+        string res_remark = 5; //资源说明//资源说明
+        string allow_date = 6; //授权时限//授权时限
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string role_name = 8; //角色名称
+    }
+}
+message PermAllowSetRoleReq {
+    string role_id = 1; //角色ID
+    string date_begin = 2; //开始日期
+    string date_end = 3; //结束日期
+    repeated string res_id = 4; //资源ID
+}
+
+message PermAllowByIdInfo {
+    string res_id = 1; //资源ID
+    string res_name = 2; //资源名称
+    string role_id = 3; //角色ID
+    string role_name = 4; //角色名称
+    string allow_status = 5; //授权状态
+    string date_begin = 6; //开始日期
+    string date_end = 7; //结束日期
+}
+message PermSetByResourceRes {
+    repeated PermSetByResourceInfo allow_res_list = 1;
+    base.PageInfoReq page_info = 2;
+    message PermSetByResourceInfo {
+        string res_id = 1; //资源ID
+        string role_name = 2; //角色名称//角色名称
+        int32 role_id = 3; //角色ID
+        string status = 4; //设置状态1已设置2未设置//状态
+        string role_remark = 5; //角色说明//角色说明
+        string perm_date = 6; //时限设置//时限设置
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string rule = 8; //规则//附加权限
+        string res_name = 9; //资源名称
+    }
+
+}
+message PermSetByResourceReq {
+    string res_info = 1; //资源ID
+    repeated string role_list = 2; //角色IDs
+    string date_begin = 3; //开始日期
+    string date_end = 4; //结束日期
+    string rule = 5; //附加权限
+}
+
+
+message PermAllowRoleInfo {
+    repeated string res_list = 1; //菜单ids
+    string date_begin = 2; //开始日期
+    string date_end = 3; //结束日期
+}
+message PermResourceByIdReq {
+    string res_id = 1; //资源ID
+    string role_id = 2; //角色ID
+}
+
+message PermSetByIdInfo {
+    string res_id = 1; //资源ID
+    string res_name = 2; //资源名称
+    string role_id = 3; //角色ID
+    string role_name = 4; //角色名称
+    string status = 5; //状态
+    string date_begin = 6; //开始日期
+    string date_end = 7; //结束日期
+    string rule = 8; //规则
+}
+message PermSetByRoleRes {
+    repeated PermSetByRoleInfo allow_role_list = 1;
+    message PermSetByRoleInfo {
+        int32 role_id = 1; //角色ID
+        string res_id = 2; //资源ID
+        string res_name = 3; //资源名称//资源名称
+        string status = 4; //状态1已设置2未设置//状态
+        string res_remark = 5; //资源说明//资源说明
+        string perm_date = 6; //时限设置//时限设置
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string rule = 8; //规则//附加权限
+        string role_name = 9; //角色名称
+    }
+}
+message PermSetByRoleReq {
+    string role_id = 1; //角色ID
+    repeated string res_id = 2; //资源ID
+    string date_begin = 3; //开始日期
+    string date_end = 4; //结束日期
+    string rule = 5; //附加权限
+}
+message PermSetTestReq {
+    string rule = 1; //规则
+}
+
+message UserPermInfoReq {
+    string user_name = 1; //姓名
+    base.PageInfoReq page_req = 2; //分页信息
+}
+message UserPermInfoRes {
+    repeated UserPermInfo user_list = 1; //用户信息
+    base.PageInfoRes page_res = 2; //分页信息
+    message UserPermInfo {
+        int32 login_id = 1; //用户ID
+        string login_name = 2; //用户名//用户名
+        string user_name = 3; //人员姓名//人员姓名
+        string branch_name = 4; //营业部//营业部
+    }
+}
+message QueryPermSetReq {
+    int32 login_id = 1; //登陆ID
+    string res_id = 2; //资源ID
+    string parent_res = 3; //父级菜单
+    string status = 4; //状态
+}
+
+message QueryPermSetRes {
+    repeated PermSetByResourceInfo allow_res_list = 1;
+    message PermSetByResourceInfo {
+        string res_name = 1; //资源//资源
+        string status = 2; //状态1已设置2未设置//状态
+        string res_remark = 3; //资源说明//资源说明
+        string perm_date = 4; //时限设置//时限设置
+        string operate_time = 5; //操作时间，更新时间//操作时间
+        string rule = 6; //规则//附加权限
+    }
+}
+
+message DataPermByTypeReq {
+    string data_type = 1; //权限类型 1行权限2列权限
+}
+message DataPermRes {
+    repeated DataTree res_tree = 1; //权限树以权限类型建立权限树
+    message DataTree {
+        string data_id = 1; //权限ID
+        string data_name = 2; //权限名称
+        repeated DataTree res_child = 3; //类型子树
+    }
+}
+
+
+message DataPermByRoleReq {
+    int32 role_id = 1; //角色ID
+    string data_name = 2; //权限名称
+    string status = 3; //状态
+}
+message DataPermAllowByRoleRes {
+    repeated DataPermByRoleInfo allow_data_role_list = 1;
+    message DataPermByRoleInfo {
+        string role_id = 1; //角色ID
+        int32 data_id = 2; //权限ID
+        string data_name = 3; //权限名称
+        string allow_status = 4; //授权状态1已授权2未授权//授权状态
+        string data_remark = 5; //权限说明//权限说明
+        string allow_date = 6; //授权时限//授权时限
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string role_name = 8; //角色名称
+    }
+}
+message DataPermSetByDataReq {
+    string data_id = 1; //数据权限定义ID
+    repeated string role_list = 2; // 角色
+    string date_begin = 3; //开始日期
+    string date_end = 4; //结束日期
+}
+message DataPermSetByRoleReq {
+    string role_id = 1; //角色
+    repeated string data_list = 2; // 数据权限定义ID
+    string date_begin = 3; //开始日期
+    string date_end = 4; //结束日期
+}
+
+message DataPermByRoleRes {
+    repeated PermByRoleInfo allow_data_role_list = 1;
+    message PermByRoleInfo {
+        string role_id = 1; //角色ID
+        int32 data_id = 2; //权限ID
+        string data_name = 3; //权限名称
+        string status = 4; //状态1已设置2未设置//状态
+        string data_remark = 5; //权限说明//权限说明
+        string perm_date = 6; //时限设置//时限设置
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string role_name = 8; //角色名称
+    }
+}
+message DataPermByDataReq {
+    int32 data_id = 1; //权限定义ID
+    string role_name = 2; //角色名称
+    string status = 3; //状态
+    base.PageInfoReq page_req = 4; //分页参数
+}
+message DataPermAllowByDataRes {
+    repeated DataAllowByDataInfo data_allow_by_data_list = 1;
+    base.PageInfoRes page_res = 2; //分页返回
+    message DataAllowByDataInfo {
+        int32 data_id = 1; //权限定义ID
+        string role_name = 2; //角色名称//角色名称
+        int32 role_id = 3; //角色ID
+        string allow_status = 4; //授权状态1已授权2未授权//授权状态
+        string role_remark = 5; //角色说明//角色说明
+        string allow_date = 6; //授权时限//授权时限
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string data_name = 8; //权限名称
+    }
+}
+
+
+message DataPermByIdReq {
+    int32 data_id = 1; //权限定义ID
+    int32 role_id = 2; //角色ID
+}
+message DataPermAllowByIdInfo {
+    int32 data_id = 1; //权限定义ID
+    string data_name = 2; //权限名称
+    string role_id = 3; //角色ID
+    string role_name = 4; //角色名称
+    string allow_status = 5; //授权状态
+    string date_begin = 6; //开始日期
+    string date_end = 7; //结束日期
+}
+message DataPermByIdReqInfo {
+    int32 data_id = 1; //权限定义ID
+    string data_name = 2; //权限名称
+    string role_id = 3; //角色ID
+    string role_name = 4; //角色名称
+    string allow_status = 5; //状态
+    string date_begin = 6; //开始日期
+    string date_end = 7; //结束日期
+}
+
+message DataPermByDataRes {
+    repeated DataByDataInfo data_by_data_list = 1;
+    base.PageInfoRes page_res = 2; //分页返回
+    message DataByDataInfo {
+        int32 data_id = 1; //权限定义ID
+        string role_name = 2; //角色名称//角色名称
+        int32 role_id = 3; //角色ID
+        string allow_status = 4; //状态1已设置2未设置//状态
+        string role_remark = 5; //角色说明//角色说明
+        string allow_date = 6; //时限设置//时限设置
+        string operate_time = 7; //操作时间，更新时间//操作时间
+        string data_name = 8; //权限名称
+    }
+}
+
+message QueryDataPermSetReq {
+    int32 login_id = 1; //登陆ID
+    string data_type = 2; //权限类型
+    string status = 3; //状态
+}
+
+message QueryDataPermSetRes {
+    repeated DataSetInfo data_set_list = 1;
+    message DataSetInfo {
+        int32 data_name = 1; //权限名称
+        string allow_status = 2; //状态1已设置2未设置//状态
+        string data_remark = 3; //权限说明//权限说明
+        string allow_date = 4; //时限设置//时限设置
+        string operate_time = 5; //操作时间，更新时间//操作时间
+    }
+}

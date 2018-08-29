@@ -1,3 +1,4 @@
+//package generator
 //class GeneratorGroovy {
 //
 //    static void main(String[] args) {

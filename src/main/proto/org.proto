@@ -1,0 +1,85 @@
+syntax = "proto3";
+import "base.proto";
+package org;
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "OrgProto";
+service OrgRpc {
+    rpc QueryOrgTree (OrgTreeReq) returns (OrgNodeInfo) {
+    } //组织架构树
+    rpc QueryOrgList (OrgListReq) returns (OrgListRes) {
+    } //查询org列表
+    rpc EditOrgTree (OrgNodeInfo) returns (base.Empty) {
+    } //调整组织架构树
+    rpc EditOrgList (EditOrgListReq) returns (base.Empty) {
+    } //调整组织架构树
+    rpc QueryOrgInfo (OrgInfoReq) returns (OrgInfo) {
+    } //查询组织详细数据
+    rpc AddOrg (AddOrgReq) returns (base.Empty) {
+    } //新增组织
+    rpc EditOrg (OrgInfo) returns (base.Empty) {
+    } //修改组织
+    rpc DeleteOrg (DeleteOrgReq) returns (base.Empty) {
+    } //删除组织
+}
+message OrgTreeReq {
+    string scheme_type = 1; //方案类型 0主架构；1清算渠道；2考核渠道（根据业务确定）
+}
+message OrgNodeInfo {
+    string org_id = 1; //组织id
+    string org_name = 2; //组织名称
+    string org_type = 3; //组织类型 1总部 2分公司 3营业部 4团队
+    repeated OrgNodeInfo sub_org_list = 4;
+}
+message OrgListReq {
+    string org_id = 1; //组织id
+    string org_name = 2; //组织名称
+    string org_type = 3; //组织类型 1总部 2分公司 3营业部 4团队
+    base.PageInfoReq page_req = 4;
+}
+message OrgListRes {
+    message SimpleOrgInfo {
+        string org_id = 1; //组织id
+        string org_code = 2; //组织代码 //组织代码
+        string org_name = 3; //组织名称 //组织名称
+        string org_type = 4; //组织类型 1总部 2分公司 3营业部 4团队 //组织类型
+        string parent_org = 5; //上级组织 //上级组织
+        string org_menager = 6; //负责人 //负责人
+    }
+    repeated SimpleOrgInfo org_info_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message EditOrgListReq {
+    repeated string org_id_list = 1; //组织id
+    string scheme_type = 2; //方案类型0主架构；1清算渠道；2考核渠道（根据业务确定）
+    string parent_org = 3; //上级组织
+}
+message AddOrgReq {
+    string org_code = 1; //组织编号
+    string org_name = 2; //组织名称
+    string org_type = 3; //组织类型 1总部 2分公司 3营业部 4团队
+    string parent_org = 4; //上级组织
+    string org_menager = 5; //负责人
+    string org_contact = 6; //联系人
+    string contact_num = 7; //联系电话
+    string org_location = 8; //联系地址
+    string org_remark = 9; //备注
+}
+message OrgInfoReq {
+    string org_id = 1; //组织id
+}
+message OrgInfo {
+    string org_id = 1; //组织id
+    string org_code = 2; //组织编号
+    string org_name = 3; //组织名称
+    string org_type = 4; //组织类型 1总部 2分公司 3营业部 4团队
+    string parent_org = 5; //上级组织
+    string org_menager = 6; //负责人
+    string org_contact = 7; //联系人
+    string contact_num = 8; //联系电话
+    string org_location = 9; //联系地址
+    string org_remark = 10; //备注
+}
+message DeleteOrgReq {
+    repeated string org_id_list = 1; //组织id
+}

@@ -1,0 +1,96 @@
+syntax = "proto3";
+package resource;
+import "base.proto";
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "ResourceProto";
+//菜单接口
+service ResourceRpc {
+    rpc QueryResourceType (base.Empty) returns (QueryResourceTypeRes) {
+    } //获取菜单类型树
+    rpc QueryResourceTypeDetail (ResourceTypeDetailReq) returns (ResourceTypeInfo) {
+    } //获取资源类型
+    rpc AddResourceType (ResourceTypeInfo) returns (base.Empty) {
+    } //菜单类型新增
+    rpc UpdateResourceType (ResourceTypeInfo) returns (base.Empty) {
+    } //更新菜单类型
+    rpc DeleteResourceType (ResourceTypeDetailReq) returns (base.Empty) {
+    } //删除菜单类型
+    rpc QueryResourceTree (ResourceTreeReq) returns (QueryResourceRes) {
+    } //根据类型获取菜单树
+    rpc QueryResourceDetail (ResourceIdReq) returns (ResourceInfo) {
+    } //获取资源详细
+    rpc AddResourceInfo (ResourceInfo) returns (base.Empty) {
+    } //菜单新增
+    rpc UpdateResourceInfo (ResourceInfo) returns (base.Empty) {
+    } //菜单更新
+    rpc DeleteResourceInfo (ResourceIdReq) returns (base.Empty) {
+    } //菜单删除
+    rpc QueryResourceParentMenu (base.Empty) returns (ResourceParentMenuRes) {
+    } //功能管理-获取父级菜单-资源分类
+    rpc QueryResourceRelateMenu (ResourceIdReq) returns (ResourceRelateMenuRes) {
+    } //获取关联菜单
+}
+message PerSetResourceReq {
+    string res_id = 1; //资源ID
+}
+message QueryResourceTypeRes {
+    repeated ResourceTypeTree res_type_tree = 1; //资源树
+    message ResourceTypeTree {
+        string type_id = 1; //类型ID
+        string type_name = 2; //类型名称
+        repeated ResourceInfoSimple res_child = 3; //类型子树
+    }
+}
+message ResourceTypeDetailReq {
+    string res_id = 1; //资源ID
+}
+message ResourceInfoSimple {
+    string res_name = 1; //资源标签
+    string res_id = 2; //资源编号
+}
+message ResourceTypeInfo {
+    string res_type = 1; //类型
+    string res_id = 2; //编号
+    string res_name = 3; //资源名称
+    string res_remark = 4; //资源说明
+}
+message DeleteResourceTypeReq {
+    string res_id = 1; //编号
+}
+
+message ResourceTreeReq {
+    string res_type = 1; //资源类型
+    string res_id = 2; //父级菜单ID
+}
+message QueryResourceRes {
+    repeated ResourceInfoTree res_tree = 1; //资源树
+    message ResourceInfoTree {
+        string res_id = 1; //类型ID
+        string res_name = 2; //类型名称
+        repeated ResourceInfoTree res_child = 3; //类型子树
+    }
+}
+message ResourceInfo {
+    string res_parent = 1; //上级资源编号
+    string res_id = 2; //资源编号
+    string res_name = 3; //资源名称
+    string res_url = 4; //资源地址
+    string res_icon = 5; //资源图片路径
+    string res_tip = 6; //资源提示信息
+    string res_remark = 7; //资源说明
+    string res_status = 8; //状态
+    string res_type = 9; //资源类型
+    string res_out = 10; //资源对外地址
+}
+
+message ResourceIdReq {
+    string res_id = 1; //资源编号
+}
+
+message ResourceParentMenuRes {
+    repeated ResourceInfoSimple res_parent_list = 1; //根节点树
+}
+message ResourceRelateMenuRes {
+    repeated ResourceInfoSimple res_parent_list = 1; //关联页面
+}

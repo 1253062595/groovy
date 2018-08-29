@@ -1,0 +1,36 @@
+syntax = "proto3";
+package simple;
+import "base.proto";
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "SimpleProto";
+
+service SimpleRpc {
+    rpc QueryFundCard (CardReq) returns (FundCard) {
+    } //获取理财名片
+    rpc UpdateFundCard (UpdateCardReq) returns (base.Empty) {
+    } //更新理财名片
+}
+
+message CardReq {
+    string card_type = 1; //名片类型  a 鑫经纪名片 b 证券名片 c 金汇理财名片
+
+}
+
+message FundCard {
+    string fund_cert_num = 1; //基金执业资格证书编号
+    string mobile_tel = 2; //手机号码
+    string wechat = 3;
+    string qq = 4;
+    string refer_num = 5; //推荐码
+    string card_type = 6; //c
+    string url = 7; //url地址
+    string user_name = 8;
+}
+
+message UpdateCardReq {
+    string mobile_tel = 1; //手机号码
+    string wechat = 2;
+    string qq = 3;
+    string card_type = 4;
+}

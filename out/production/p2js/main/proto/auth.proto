@@ -1,0 +1,172 @@
+syntax = "proto3";
+import "base.proto";
+package auth;
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "AuthProto";
+service AuthRpc {
+    rpc QueryServiceList (base.Empty) returns (ServiceRes) {
+    } //查询所有service
+    rpc QueryMethodListByServiceName (ServiceNameReq) returns (MethodListRes) {
+    } //查询service所有method
+    rpc QueryParamListByMethodName (MethodNameReq) returns (ParamListRes) {
+    } //查询method所有param
+    rpc QueryTableColumnList (TableColumnListReq) returns (TableColumnListRes) {
+    } //查询表的所有列
+    rpc QueryRowAuthTree (base.Empty) returns (AuthTreeRes) {
+    } //查询权限树
+    rpc QueryRowAuthList (RowAuthListReq) returns (RowAuthListRes) {
+    } //查询权限列表
+    rpc QueryRowAuthInfo (RowAuthInfoReq) returns (RowAuthInfo) {
+    } //查询权限列表
+    rpc AddRowAuth (AddRowAuthReq) returns (base.Empty) {
+    } //新增行权限
+    rpc EditRowAuth (RowAuthInfo) returns (base.Empty) {
+    } //修改行权限
+    rpc DeleteRowAuth (DeleteRowAuthReq) returns (base.Empty) {
+    } //删除行权限
+    rpc QueryColumnAuthList (ColumnAuthListReq) returns (ColumnAuthListRes) {
+    } //查询权限列表
+    rpc QueryColumnAuthInfo (ColumnAuthInfoReq) returns (ColumnAuthInfo) {
+    } //查询权限详细数据
+    rpc AddColumnAuth (AddColumnAuthReq) returns (base.Empty) {
+    } //新增列权限
+    rpc EditColumnAuth (ColumnAuthInfo) returns (base.Empty) {
+    } //修改列权限
+    rpc DeleteColumnAuth (DeleteColumnAuthReq) returns (base.Empty) {
+    } //删除列权限
+}
+message ServiceRes {
+    repeated string service_list = 1; //所有service
+}
+message ServiceNameReq {
+    string service_name = 1;
+}
+message MethodListRes {
+    repeated string method_list = 1;
+}
+message MethodNameReq {
+    string service_name = 1;
+    string method_name = 2;
+}
+message ParamListRes {
+    repeated string param_list = 1;
+}
+message TableColumnListReq {
+    string table_name = 1;
+}
+message TableColumnListRes {
+    repeated string column_name_list = 1;
+}
+message AuthTreeRes {
+    message RowNode {
+        string auth_id = 1; //行权限Id
+        string row_remark = 2; //行权限说明
+    }
+    message TableNode {
+        string row_table = 1; //表名
+        string row_table_name = 2; //表名
+        repeated RowNode row_list = 3;
+    }
+    repeated TableNode table_list = 1;
+}
+message RowAuthListReq {
+    string row_table = 1; //表名
+    string row_type = 2; //权限类型
+    string row_name = 3; //行权限名称
+    base.PageInfoReq page_req = 4;
+}
+message RowAuthListRes {
+    message SimpleRowAuthInfo {
+        string auth_id = 1; //行权限Id
+        string row_table = 2; //表名 //权限表
+        string row_name = 3; //行权限名称 //权限名称
+        string row_type = 4; //权限类型 //权限类型
+        string row_remark = 5; //行权限说明 //权限说明
+        int32 row_order = 6; //优先级 //优先级
+    }
+    repeated SimpleRowAuthInfo auth_info_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message RowAuthInfoReq {
+    string auth_id = 1; //行权限Id
+}
+message Condition {
+    string column_name = 1;
+    string auth_type = 2;
+}
+message ResultHandler {
+    string column_name = 1;
+    string handler = 2;
+    string alias = 3;
+}
+message AddRowAuthReq {
+    string row_table = 1; //表名
+    string row_name = 2; //行权限名称
+    string row_type = 3; //权限类型
+    int32 row_order = 4; //优先级
+    string row_remark = 5; //行权限说明
+    string row_set_type = 6; //1 预置权限；2 自定义权限
+    string row_set = 7; //设置
+    Condition condition_setting = 8;
+    repeated ResultHandler result_handler_list = 9;
+}
+message RowAuthInfo {
+    string auth_id = 1; //行权限Id
+    string row_table = 2; //表名
+    string row_name = 3; //行权限名称
+    string row_type = 4; //权限类型
+    int32 row_order = 5; //优先级
+    string row_remark = 6; //行权限说明
+    string row_set_type = 7; //1 预置权限；2 自定义权限
+    string row_set = 8; //设置
+    Condition condition_setting = 9;
+    repeated ResultHandler result_handler_list = 10;
+}
+message DeleteRowAuthReq {
+    string auth_id = 1; //行权限Id
+}
+message ColumnAuthListReq {
+    string col_table = 1; //表名
+    string col_type = 2; //权限类型
+    string col_name = 3; //行权限名称
+    base.PageInfoReq page_req = 4;
+}
+message ColumnAuthListRes {
+    message SimpleColumnAuthInfo {
+        string auth_id = 1; //列权限Id
+        string col_table = 2; //表名 //列限表
+        string col_name = 3; //列权限名称 //权限名称
+        string col_type = 4; //权限类型 //权限类型
+        string col_remark = 5; //列权限说明 //权限说明
+        int32 col_order = 6; //优先级 //优先级
+    }
+    repeated SimpleColumnAuthInfo auth_info_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message ColumnAuthInfoReq {
+    string auth_id = 1; //列权限Id
+}
+message FilterColumn {
+    string service_name = 1;
+    string method_name = 2;
+    repeated string filter_param_list = 3;
+}
+message AddColumnAuthReq {
+    string col_name = 1; //权限名称
+    string col_type = 2; //权限分类
+    int32 col_order = 3; //优先级
+    string col_remark = 4; //列权限说明
+    repeated FilterColumn filter_column_list = 5;
+}
+message ColumnAuthInfo {
+    string auth_id = 1; //行权限Id
+    string col_name = 2; //权限名称
+    string col_type = 3; //权限分类
+    int32 col_order = 4; //优先级
+    string col_remark = 5; //列权限说明
+    repeated FilterColumn filter_column_list = 6;
+}
+message DeleteColumnAuthReq {
+    string auth_id = 1; //列权限Id
+}

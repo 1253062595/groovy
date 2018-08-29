@@ -1,0 +1,207 @@
+syntax = "proto3";
+import "base.proto";
+package user;
+option java_package = "com.jinhui365.crm.appserver.grpc.proto";
+option java_multiple_files = false;
+option java_outer_classname = "UserProto";
+service UserRpc {
+    rpc QueryUserList (UserListReq) returns (UserListRes) {
+    } //人员一览
+    rpc QueryUserInfo (UserInfoReq) returns (UserInfo) {
+    } //人员详细查询
+    rpc AddUser (AddUserReq) returns (base.Empty) {
+    } //人员新增
+    rpc EditUser (UserInfo) returns (base.Empty) {
+    } //人员修改
+    rpc DeleteUser (UserInfoDelReq) returns (base.Empty) {
+    } //人员删除
+    rpc QueryLoginList (LoginListReq) returns (LoginListRes) {
+    } //用户一览
+    rpc QueryLoginInfo (LoginInfoReq) returns (LoginInfo) {
+    } //用户详细查询
+    rpc AddLogin (AddLoginReq) returns (base.Empty) {
+    } //用户新增
+    rpc EditLogin (LoginInfo) returns (base.Empty) {
+    } //用户修改
+    rpc DeleteLogin (LoginInfoReq) returns (base.Empty) {
+    } //用户禁用
+    rpc ResetLoginPassword (ResetLoginPasswordReq) returns (base.Empty) {
+    } //重置用户密码
+    rpc QueryRoleList (RoleListReq) returns (RoleListRes) {
+    } //角色一览
+    rpc QueryRoleInfo (RoleInfoReq) returns (RoleInfo) {
+    } //角色详细查询
+    rpc AddRole (AddRoleReq) returns (base.Empty) {
+    } //角色新增
+    rpc EditRole (RoleInfo) returns (base.Empty) {
+    } //角色修改
+    rpc DeleteRole (RoleInfoReq) returns (base.Empty) {
+    } //角色删除
+    rpc QuerySimpleUserList (SimpleUserListReq) returns (SimpleUserListRes) {
+    } //查询人员列表，用于角色-用户设置
+    rpc QueryLoginInfoByUserIds (LoginInfoByUserIdsReq) returns (LoginInfoByUserIdsRes) {
+    } //通过人员id查询用户列表，用于角色-用户设置
+    rpc AddLoginToRole (AddLoginToRoleReq) returns (base.Empty) {
+    } //角色添加用户
+}
+message UserListReq {
+    string user_name = 1; //姓名
+    string user_type = 2; //人员类型1内部2外部
+    string mobile_tel = 3; //手机号码
+    string branch_no = 4; //所属营业部
+    string status = 5; //人员状态
+    base.PageInfoReq page_req = 6;
+}
+message UserListRes {
+    message SUserInfo {
+        string user_id = 1; //人员编号 //人员编号
+        string user_name = 2; //姓名 //姓名
+        string mobile_tel = 3; //手机号码 //手机号码
+        string org_name = 4; //所属营业部 //所属营业部
+        string group_name = 5; //所属团队 //所属团队
+        string user_type = 6; //人员类型1内部2外部 //人员类型
+        string hire_date = 7; //入职日期 //入职日期
+        string term_date = 8; //离职日期 //离职日期
+    }
+    repeated SUserInfo userInfo_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message UserInfoReq {
+    string user_id = 1; //人员id
+}
+message UserInfo {
+    string user_id = 1; //人员id
+    string user_name = 2; //姓名
+    string user_type = 3; //人员类型1内部2外部
+    string branch_no = 4; //所属营业部
+    string group_no = 5; //所属团队
+    string mobile_tel = 6; //手机号码
+    string id_kind = 7; //证件类型
+    string id_no = 8; //证件号码
+    string auth_sign = 9; //外部人员认证签名
+    string auth_key = 10; //密钥
+    string hire_date = 11; //入职日期
+}
+message UserInfoDelReq {
+    string user_id = 1; //人员id
+    string term_date = 2; //离职日期
+    string term_remark = 3; //离职说明
+}
+message AddUserReq {
+    string user_name = 1; //姓名
+    string user_type = 2; //人员类型1内部2外部
+    string branch_no = 3; //所属营业部
+    string group_no = 4; //所属团队
+    string mobile_tel = 5; //手机号码
+    string id_kind = 6; //证件类型
+    string id_no = 7; //证件号码
+    string auth_sign = 8; //外部人员认证签名
+    string auth_key = 9; //密钥
+    string hire_date = 10; //入职日期
+}
+message LoginListReq {
+    string user_name = 1; //人员姓名
+    string login_name = 2; //用户名
+    string user_type = 3; //人员类型
+    base.PageInfoReq page_req = 4;
+}
+message LoginListRes {
+    message SimpleLoginInfo {
+        string user_name = 1; //所属人员 //所属人员
+        string login_id = 2; //用户ID //用户编号
+        string login_name = 3; //用户名 //用户名
+        string user_type = 4; //人员类型 //人员类型
+        string login_status = 5; //用户状态 //用户状态
+        string rec_gen_time = 6; //创建时间 //创建时间
+    }
+    repeated SimpleLoginInfo loginInfo_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message LoginInfoReq {
+    string login_id = 1; //用户id
+}
+message AddLoginReq {
+    string user_id = 1; //人员id
+    string login_name = 2; //用户名
+    string login_status = 3; //用户状态
+    repeated string role_id = 4; //用户角色
+}
+message LoginInfo {
+    string login_id = 1; //用户id
+    string user_id = 2; //人员id
+    string login_name = 3; //用户名
+    string login_status = 4; //用户状态
+    repeated string role_id = 5; //用户角色
+}
+message ResetLoginPasswordReq {
+    string login_id = 1; //用户ID
+    string password = 2; //新密码
+}
+message RoleListReq {
+    string role_name = 1; //角色名称
+    base.PageInfoReq page_req = 2;
+}
+message RoleListRes {
+    message SimpleRoleInfo {
+        string role_id = 1; //角色ID //角色ID
+        string role_name = 2; //角色名称 //角色名称
+        repeated string org_name_list = 3; //所属营业部 //所属营业部
+        string role_remark = 4; //角色说明 //角色说明
+    }
+    repeated SimpleRoleInfo roleInfo_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message RoleInfoReq {
+    string role_id = 1; //角色ID
+}
+message AddRoleReq {
+    string role_name = 1; //角色名称
+    string source_role = 2; //复制角色
+    repeated string org_id_list = 3; //所属营业部
+    string role_remark = 4; //角色说明
+}
+message RoleInfo {
+    string role_id = 1; //角色ID
+    string role_name = 2; //角色名称
+    repeated string org_id_list = 3; //所属营业部
+    string role_remark = 4; //角色说明
+}
+
+message SimpleUserListReq {
+    string user_id = 1; //人员id
+    string branch_no = 2; //营业部id
+    base.PageInfoReq page_req = 3;
+}
+
+message SimpleUserListRes {
+    message SUserInfo {
+        string user_id = 1; //人员编号
+        string user_name = 2; //姓名 //人员姓名
+        string org_name = 3; //所属营业部 //所属营业部
+        string user_type = 4; //人员类型1内部2外部 //分类
+    }
+    repeated SUserInfo userInfo_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message LoginInfoByUserIdsReq {
+    repeated string user_id_list = 1; //人员编号
+    base.PageInfoReq page_req = 2;
+}
+message LoginInfoByUserIdsRes {
+    message UserLoginMap {
+        string user_id = 1; //人员编号
+        string user_name = 2; //人员名称 //人员名称
+        string login_id = 3; //用户id
+        string login_name = 4; //用户名 //用户名
+    }
+    repeated UserLoginMap user_login_map_list = 1;
+    base.PageInfoRes page_res = 2;
+}
+message AddLoginToRoleReq {
+    message UserIdLoginIdMap {
+        string user_id = 1; //人员编号
+        string login_id = 2; //用户id
+    }
+    repeated UserIdLoginIdMap user_login_map_list = 1;
+    string role_id = 2;
+}
